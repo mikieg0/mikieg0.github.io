@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f3eb">
+  <meta name="description" content="Pan recién horneado, pasteles artesanales y postres hechos con cariño. Explora nuestro catálogo y programa tu pedido.">
+  <meta property="og:title" content="Miga Dorada — Panadería artesanal">
+  <meta property="og:description" content="Un buen día comienza con algo recién horneado.">
+  <title>Miga Dorada | Panadería artesanal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="demo-banner"><span class="demo-dot"></span> DEMOSTRACIÓN · Personaliza los datos de tu negocio desde <button class="text-button" data-open-admin>Administración</button></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Miga Dorada, inicio">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 42 42" fill="none"><path d="M8 28.5c0-7.5 5.2-15 13-15s13 7.5 13 15c0 3-2.4 5.5-5.5 5.5h-15C10.4 34 8 31.5 8 28.5Z" fill="currentColor"/><path d="M16 20v5m6-7v6m6-3v5" stroke="#fff9ee" stroke-width="2" stroke-linecap="round"/><path d="M7 36h28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+      <span class="brand-name">miga <strong>dorada</strong><small>PANADERÍA ARTESANAL</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#productos">Productos</a><a href="#nosotros">Nosotros</a><a href="#horarios">Horarios</a><a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button favorite-shortcut" id="favoritesShortcut" aria-label="Ver favoritos" title="Mis favoritos"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg></button>
+      <button class="icon-button" id="historyShortcut" aria-label="Historial de pedidos" title="Mis pedidos"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5m4-1v5l3 2"/></svg></button>
+      <button class="cart-button" id="cartShortcut"><svg viewBox="0 0 24 24"><path d="M3 3h2l2.4 11.4a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 1.9-1.4L22 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>Mi pedido</span><b id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <img class="hero-photo" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=2000&q=85" alt="Pan artesanal recién horneado sobre una mesa de madera">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <div class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> HORNEADO CON CARIÑO, CADA DÍA</div>
+        <h1>Un buen día<br>comienza con algo<br><em>recién horneado.</em></h1>
+        <p>Recetas de siempre, ingredientes nobles y ese aroma que te hace sentir en casa.</p>
+        <div class="hero-buttons"><a class="button button-gold" href="#productos">Descubre el catálogo <span>↗</span></a><button class="button button-outline" id="heroOrder">Haz tu pedido <span>→</span></button></div>
+        <div class="hero-rating"><div class="avatar-stack"><span>M</span><span>A</span><span>L</span><span>+</span></div><div><span class="stars">★★★★★</span><small>La tradición sabe mejor compartida</small></div></div>
+      </div>
+      <div class="hero-stamp"><span>HECHO<br>CON AMOR</span><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="35"/><path d="M40 11c0 0-12 17-12 27a12 12 0 0 0 24 0C52 28 40 11 40 11Z"/></svg></div>
+      <div class="hero-caption">PEQUEÑOS LOTES · GRANDES MOMENTOS</div>
+    </section>
+
+    <section class="trust-strip" aria-label="Nuestros valores"><div>✳ <span>Ingredientes seleccionados</span></div><i></i><div>✳ <span>Hecho fresco cada mañana</span></div><i></i><div>✳ <span>Un sabor que se comparte</span></div></section>
+
+    <section class="section products-section" id="productos">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> NUESTRAS DELICIAS</div><h2>Directo del horno<br>a <em>tu mesa.</em></h2></div>
+        <p>Cada pieza cuenta una historia. Encuentra tu favorita, hecha a mano y con los mejores ingredientes.</p>
+      </div>
+      <div class="catalog-toolbar">
+        <div class="category-tabs" id="categoryTabs" aria-label="Categorías de productos"></div>
+        <div class="catalog-tools">
+          <label class="search-box"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="productSearch" type="search" placeholder="Buscar un antojo..." aria-label="Buscar productos"><kbd>⌕</kbd></label>
+          <label class="sort-select"><span>Ordenar:</span><select id="sortProducts" aria-label="Ordenar productos"><option value="featured">Destacados</option><option value="price-low">Precio: menor</option><option value="price-high">Precio: mayor</option><option value="name">Nombre</option></select></label>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="catalog-bottom"><span id="productCount"></span><button class="button button-quiet" id="showFavorites">♡ Ver mis favoritos</button></div>
+    </section>
+
+    <section class="promo-section" id="promociones">
+      <div class="promo-image"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1050&q=85" alt="Croissants dorados recién horneados"></div>
+      <div class="promo-copy"><div class="eyebrow"><span class="eyebrow-line"></span> UN CAPRICHO ESPECIAL</div><span class="promo-label" id="promoLabel">OFERTA DEL DÍA</span><h2 id="promoTitle">Un poquito<br>de <em>felicidad.</em></h2><p id="promoDescription">El mejor plan: algo recién horneado y un ratito para ti. Pregunta por nuestras sorpresas del día.</p><button class="button button-dark" id="promoButton">Ver la selección <span>→</span></button><span class="promo-footnote">* Consulta disponibilidad antes de realizar tu pedido.</span></div>
+      <div class="promo-decoration">BUENOS DÍAS<br>EMPIEZAN AQUÍ</div>
+    </section>
+
+    <section class="section about-section" id="nosotros">
+      <div class="about-photo-wrap"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1000&q=85" alt="Croissants artesanales recién horneados"><div class="photo-badge"><span>DESDE</span><strong>cada<br>mañana</strong><span>CON MUCHO AMOR</span></div></div>
+      <div class="about-copy"><div class="eyebrow"><span class="eyebrow-line"></span> UN POCO DE NOSOTROS</div><h2>La diferencia está<br>en <em>hacerlo con calma.</em></h2><p class="about-lead">Creemos que los mejores recuerdos comienzan con un pan compartido.</p><p>Cuidamos cada detalle: amasamos a mano, respetamos los tiempos y elegimos ingredientes que hacen que lo sencillo sepa extraordinario. Así, cada día.</p><a class="underlined-link" href="#contacto">Ven a conocernos <span>↗</span></a><div class="about-values"><div><strong>01</strong><span>Hecho a mano,<br>sin apuros</span></div><div><strong>02</strong><span>Ingredientes<br>de calidad</span></div><div><strong>03</strong><span>Mucho cariño<br>en cada receta</span></div></div></div>
+    </section>
+
+    <section class="quote-section"><span class="quote-mark">“</span><div class="eyebrow">PALABRAS QUE NOS ALEGRAN</div><blockquote id="testimonialQuote">“El olor a pan recién hecho es mi forma favorita de empezar la mañana.”</blockquote><div class="quote-author"><span class="stars">★★★★★</span><span id="testimonialAuthor">— Una vecina feliz</span></div><span class="quote-disclaimer">Testimonios de ejemplo para esta demostración.</span></section>
+
+    <section class="hours-section" id="horarios">
+      <div class="hours-image"><img src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=1200&q=85" alt="Panadería con panes artesanales en exhibición"><div class="hours-photo-label">EL PRIMER HORNEADO<br>ES EL MÁS ESPECIAL</div></div>
+      <div class="hours-card"><div class="eyebrow"><span class="eyebrow-line"></span> CUANDO EL ANTOJO LLAMA</div><h2>Te esperamos<br>con el horno <em>encendido.</em></h2><div class="open-status" id="openStatus"><span class="status-dot"></span><strong>Consultando horario...</strong></div><div class="hours-list" id="hoursList"></div><p class="hours-note">¿Llegas más tarde? Programa tu pedido para el próximo horario disponible.</p><button class="text-button link-button" id="scheduleButton">Programar pedido <span>→</span></button></div>
+    </section>
+
+    <section class="faq-section section" id="preguntas">
+      <div class="faq-intro"><div class="eyebrow"><span class="eyebrow-line"></span> TE AYUDAMOS</div><h2>Preguntas<br><em>frecuentes.</em></h2><p>Si tienes otra consulta, escríbenos y estaremos encantados de ayudarte.</p><a class="underlined-link" href="#contacto">Escríbenos <span>↗</span></a></div>
+      <div class="faq-list">
+        <details><summary>¿Puedo pedir para otro día?<span>+</span></summary><p>¡Claro! Elige recojo o delivery en el carrito y selecciona la fecha y hora que mejor te convenga. Los horarios que aparecen son de demostración y puedes actualizarlos desde Administración.</p></details>
+        <details><summary>¿Cuánto cuesta el delivery?<span>+</span></summary><p>El costo se calcula según la zona elegida. Ingresa tus datos en el carrito para consultar las zonas y tarifas de demostración disponibles.</p></details>
+        <details><summary>¿Puedo personalizar una torta?<span>+</span></summary><p>En la nota especial de tu pedido cuéntanos qué tienes en mente. Confirma los detalles y disponibilidad por WhatsApp antes de darlo por reservado.</p></details>
+        <details><summary>¿Cómo recibe la panadería mi pedido?<span>+</span></summary><p>Al enviar el pedido, el resumen se envía por WhatsApp al número de la panadería configurado en Administración. La panadería confirma la disponibilidad y el pedido permanece pendiente hasta entonces.</p></details>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto"><div><div class="eyebrow"><span class="eyebrow-line"></span> AQUÍ EMPIEZAN LOS BUENOS DÍAS</div><h2>¿Horneamos algo<br><em>para ti?</em></h2><p>Cuéntanos qué se te antoja. Estamos listos para preparar algo delicioso.</p><div class="contact-actions"><button class="button button-gold" id="contactOrder">Hacer un pedido <span>→</span></button><button class="button button-outline" id="contactWhatsapp">Escribir por WhatsApp <span>↗</span></button></div></div><div class="contact-info"><div><span class="contact-icon">⌖</span><span><small>ENCUÉNTRANOS</small><strong id="contactAddress">Ubicación de demostración<br>Configura tu dirección en Administración</strong><a id="mapLink" href="https://maps.google.com/?q=panader%C3%ADa" target="_blank" rel="noopener">Ver en Google Maps ↗</a></span></div><div><span class="contact-icon">◷</span><span><small>HORARIO DE HOY</small><strong id="contactTodayHours">Consulta nuestro horario</strong><a href="#horarios">Ver todos los horarios ↗</a></span></div><div><span class="contact-icon">✆</span><span><small>HABLEMOS</small><strong id="contactPhone">Configura tu WhatsApp</strong><a href="#contacto" id="contactPhoneLink">¡Nos encantará leerte!</a></span></div></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-mark"><svg viewBox="0 0 42 42" fill="none"><path d="M8 28.5c0-7.5 5.2-15 13-15s13 7.5 13 15c0 3-2.4 5.5-5.5 5.5h-15C10.4 34 8 31.5 8 28.5Z" fill="currentColor"/><path d="M16 20v5m6-7v6m6-3v5" stroke="#fff9ee" stroke-width="2" stroke-linecap="round"/></svg></span><span class="brand-name">miga <strong>dorada</strong><small>PANADERÍA ARTESANAL</small></span></a><span>Hecho con cariño, horneado cada día. <span class="footer-demo">· Sitio de demostración</span></span><div class="footer-links"><a href="#productos">Productos</a><a href="#preguntas">Preguntas frecuentes</a><button class="text-button" data-open-admin>Administración</button></div><small class="copyright">© <span id="currentYear"></span> Miga Dorada · Datos ilustrativos</small></footer>
+
+  <button class="whatsapp-float" id="floatingWhatsapp" aria-label="Contactar por WhatsApp" title="Contactar por WhatsApp"><svg viewBox="0 0 24 24"><path d="M20.5 11.8a8.6 8.6 0 0 1-12.7 7.5L3 21l1.7-4.6a8.6 8.6 0 1 1 15.8-4.6Z"/><path d="M8.2 7.9c.2-.5.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4 0 .7.5.8 1.2 1.5 2 2 .3.2.5.2.7 0l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.2.1.4.3.4.5 0 .4-.2 1.1-.7 1.5s-1.1.6-1.8.5c-.6-.1-1.5-.3-2.5-.9-1.3-.8-2.3-1.8-2.9-2.8-.6-.9-.9-1.8-.9-2.4 0-.7.4-1.3.8-1.8Z"/></svg></button>
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal-card" id="modalCard" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></section></div>
+</body>
+</html>
